@@ -8,11 +8,17 @@
 	<style type="text/css">
 		body {
 			background: #ccc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
 		}
 
 		#magazine {
-			width: 1152px;
-			height: 752px;
+			width: 800px;
+			height: 522px;
+			margin: auto;
 		}
 
 		#magazine .turn-page {
@@ -44,7 +50,15 @@
 				elevation: 50,
 				when: {
 					turned: function (e, page) {
-						/*console.log('Current view: ', $(this).turn('view'));*/
+						// if (page === 1 || page === 10) {
+						// 	// Animate to center the single page or page 10
+						// 	$(this).css('transform', 'translateX(0)');
+						// 	$(this).turn('display', 'single');
+						// } else if (page > 1 && page < 10) {
+						// 	// Animate back to double mode
+						// 	$(this).css('transform', 'translateX(0)');
+						// 	$(this).turn('display', 'double');
+						// }
 					}
 				}
 			});
